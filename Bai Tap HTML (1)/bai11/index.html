@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tạo form và các điều khiển trên form</title>
+</head>
+<body>
+  <form>
+    <h1 style="color: rgb(182, 234, 165);">Đăng nhập</h1>
+    <table style="border: 1px solid;">
+      <tbody style="background-color: rgb(213, 213, 250);">
+        <tr>
+          <td style="border: 1px solid;">Mã người dùng</td>
+          <td><input type="text" name="manguoidung" /></td>
+        </tr>
+        <tr>
+          <td style="border: 1px solid;">Mật khẩu</td>
+          <td><input type="password" name="matkhau" /></td>
+        </tr>
+        <tr>
+          <th colspan="2"><input type="submit" name="submit" onclick="
+            event.preventDefault();
+            const manguoidung = new URLSearchParams(window.location.search).get('manguoidung');
+            document.getElementById('tennguoidung').innerText = manguoidung;
+          " value="Đồng ý" /></th>
+        </tr>
+        <tr id="tennguoidung">
+        </tr>
+      </tbody>
+    </table>
+  </form>
+  
+</body>
+</html>
